@@ -1,5 +1,7 @@
 # Import the base image as UBI-Nodejs 18 image
-FROM registry.access.redhat.com/ubi8/nodejs-22
+FROM registry.access.redhat.com/ubi8/nodejs-18
+
+ENV NODE_OPTIONS="--max-old-space-size=8192"
 
 # Set the working directory to /project
 WORKDIR /project
